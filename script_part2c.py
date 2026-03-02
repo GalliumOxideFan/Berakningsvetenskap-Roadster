@@ -22,13 +22,13 @@ for i in range(0,c_max):
     error = np.abs(cons-absolute_truth)
     error_list[i]=error
 
-plt.rcParams.update({'font.size': 16})  # Set default font size for all text
+plt.rcParams.update({'font.size': 19})  # Set default font size for all text
 plt.rcParams['lines.linewidth'] = 3
 plt.loglog(n_list, error_list, label="Actual error")
 plt.loglog(n_list, 100000/(n_list**2), label="1/n²")
 plt.loglog(n_list, 100000/(n_list), label="1/n")
 plt.loglog(n_list, 100000/(n_list**3), label="1/n³")
-plt.xlabel("n")
-plt.ylabel("Error")
+plt.xlabel("n", fontsize=25)
+plt.ylabel("Error", fontsize = 25)
 plt.legend()
 plt.show()
