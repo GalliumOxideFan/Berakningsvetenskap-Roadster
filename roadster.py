@@ -92,7 +92,6 @@ def NR(f, f_prime, x0, tol):
     while err > tol:
         fx, intErr = f(x)
         update = fx/f_prime(x)
-        print(x)
         x = x - update
         err = np.abs(update)+np.abs(intErr)
 

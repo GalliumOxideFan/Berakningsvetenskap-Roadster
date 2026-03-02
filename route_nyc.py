@@ -61,7 +61,6 @@ def nyc_route_traveler_euler(t0,h):
     speed_kmph.append(speed)
     
     # Här måste  sista värdet för distance och time fixas för att slutvärdet ska bli  60 km
-    distance_left = 60-distance_km[-2]
     distance_km[-1] = 60
 
     def t60(t): return distance_km[-2] + (t - time_h[-2]) * route_nyc(t, distance_km[-2])[0][0]-60
